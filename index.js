@@ -1,6 +1,8 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const authRoutes = require('./routes/auth');
+const readingListRoutes = require('./routes/readingList');
+const wishlistRoutes = require('./routes/wishlist');
 const axios = require('axios');
 require('dotenv').config();
 
@@ -9,6 +11,10 @@ const port = process.env.PORT || 3000;
 app.use(bodyParser.json());
 
 app.use('/auth', authRoutes);
+app.use('/reading-list', readingListRoutes);
+app.use('/wishlist', wishlistRoutes);
+// app.post('/wishlist/get', checkAuth, addToWishlist);
+// app.get('/wishlist/get', checkAuth, getWishlist);
 
 function convertDateFormat(inputDate) {
     if (inputDate === '-' || inputDate.length !== 10) {
