@@ -1,8 +1,14 @@
 const express = require('express');
+const bodyParser = require('body-parser');
+const authRoutes = require('./routes/auth');
 const axios = require('axios');
+require('dotenv').config();
 
 const app = express();
 const port = process.env.PORT || 3000;
+app.use(bodyParser.json());
+
+app.use('/auth', authRoutes);
 
 function convertDateFormat(inputDate) {
     if (inputDate === '-' || inputDate.length !== 10) {
@@ -10,7 +16,7 @@ function convertDateFormat(inputDate) {
     }
     
     const dateTime = new Date(inputDate);
-    const day = String(dateTime.getDate()).padStart(2, '0');
+    const day = String(dateTime.getDate()) .padStart(2, '0');
     const month = String(dateTime.getMonth() + 1).padStart(2, '0'); // Months are 0-based in JS
     const year = dateTime.getFullYear();
   
