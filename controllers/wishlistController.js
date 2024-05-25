@@ -6,10 +6,10 @@ const addToWishlist = async (req, res) => {
 
     try {
         // Check if the book already exists
-        let [rows] = await pool.query('SELECT book_id FROM wishlist WHERE book_id = $1 AND user_id = $2', [book_id, userId]);
+        let result = await pool.query('SELECT book_id FROM wishlist WHERE book_id = $1 AND user_id = $2', [book_id, userId]);
         let bookId;
 
-        if (rows.length > 0) {
+        if (result.rows.length > 0) {
             res.status(200).json({message: 'Book already exists'});
         } else {
             const [result] = await db.query(
