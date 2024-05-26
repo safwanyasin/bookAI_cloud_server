@@ -27,7 +27,7 @@ bookAI_cloud_server/
 │   ├── search.js
 │   └── wishlist.js
 └── README.md
-```
+
 
 ## Local Testing
 
