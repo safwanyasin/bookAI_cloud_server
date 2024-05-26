@@ -1,4 +1,4 @@
-# bookAI Cloud Server
+# TaleTuner Cloud Server
 
 This repository contains the code for the BookAI cloud server. The server provides endpoints for user authentication, searching for books using the Google Books API, managing reading and wishlist, and generating stories. The project is split into two parts: local testing and cloud deployment on Google Cloud Platform (GCP).
 
