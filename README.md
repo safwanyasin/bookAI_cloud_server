@@ -1,5 +1,3 @@
-Sure, here is the complete `README.md` file content:
-
 ```markdown
 # bookAI Cloud Server
 
