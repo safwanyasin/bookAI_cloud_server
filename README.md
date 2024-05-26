@@ -3,7 +3,7 @@
 This repository contains the code for the BookAI cloud server. The server provides endpoints for user authentication, searching for books using the Google Books API, managing reading and wishlist, and generating stories. The project is split into two parts: local testing and cloud deployment on Google Cloud Platform (GCP).
 
 ## Repository Structure
-
+```bash
 bookAI_cloud_server/
 ├── local/
 │   ├── controllers/
@@ -27,7 +27,7 @@ bookAI_cloud_server/
 │   ├── search.js
 │   └── wishlist.js
 └── README.md
-
+```
 
 ## Local Testing
 
@@ -95,6 +95,4 @@ The `cloud` folder contains the code for deploying each feature as separate Goog
 ## License
 
 This project is licensed under the MIT License.
-```
 
-Copy this content and save it as `README.md` in the root of your repository.
